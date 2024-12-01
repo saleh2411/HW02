@@ -6,6 +6,7 @@
 // SECTION A: Recursive Palindrome Check
 int is_palindrome_recursive(char* str, int start, int end) {
     // TODO: Implement the logic for recursive palindrome check
+    //saleh clone 10:27
     return 0; // Placeholder return value
 }
 
