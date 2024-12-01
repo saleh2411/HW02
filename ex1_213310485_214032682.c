@@ -13,10 +13,10 @@ int is_palindrome_recursive(char* str, int start, int end) {
 int is_palindrome_iterative(char* str) {
     int start=0,end= strlen(str) - 1;
     while (start<end) {
-        while (start<end && !isalnum((unsigned char)str[start])) {
+        while (start<end && !isalpha((unsigned char)str[start])) {
             start++;
         }
-        while (start<end && !isalnum((unsigned char)str[end])) {
+        while (start<end && !isalpha((unsigned char)str[end])) {
             end--;
         }
         if (tolower((unsigned char)str[start]) != tolower((unsigned char)str[end])) {
