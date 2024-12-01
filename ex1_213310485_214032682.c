@@ -13,7 +13,7 @@ int is_palindrome_recursive(char* str, int start, int end) {
     if ( isalpha((unsigned char)str[start]) && isalpha((unsigned char)str[end]) )
     {
         if (tolower((unsigned char)str[start]) == tolower((unsigned char)str[end])) {//keep going
-            return is_palindrome_recursive(str,  start-1,  end-1);
+            return 1 * is_palindrome_recursive(str,  start+1,  end-1 );
         }
         else {//exit
             return 0;
@@ -22,10 +22,10 @@ int is_palindrome_recursive(char* str, int start, int end) {
     }
     else if (!isalpha((unsigned char)str[start])) // start = " "
     {
-        /* code */
+        return is_palindrome_recursive(str,  start+1,  end );
     }
     // end = " "
-    
+    return is_palindrome_recursive(str,  start,  end-1 );
        
 }  
 
