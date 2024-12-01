@@ -32,14 +32,17 @@ int is_palindrome_recursive(char* str, int start, int end) {
 // SECTION B: Iterative Palindrome Check
 int is_palindrome_iterative(char* str) {
     int start=0,end= strlen(str) - 1;
+    if (str == NULL || strlen(str) == 0) {
+        return 0;
+    }
     while (start<end) {
-        while (start<end && !isalpha((unsigned char)str[start])) {
+        while (start<end && !isalpha(str[start])) {
             start++;
         }
-        while (start<end && !isalpha((unsigned char)str[end])) {
+        while (start<end && !isalpha(str[end])) {
             end--;
         }
-        if (tolower((unsigned char)str[start]) != tolower((unsigned char)str[end])) {
+        if (tolower(str[start]) != tolower(str[end])) {
             return 1;
         }
         start++;
