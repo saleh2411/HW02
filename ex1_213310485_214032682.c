@@ -6,8 +6,30 @@
 // SECTION A: Recursive Palindrome Check
 int is_palindrome_recursive(char* str, int start, int end) {
     // TODO: Implement the logic for recursive palindrome check
-    return 0; // Placeholder return value
-}
+    if(!(start < end)){
+        return 1;
+    }
+    if (/* condition */)
+    {
+        if (/* condition */)
+        {
+            /* code */
+        }
+        else
+        {
+            /* code */
+        }
+        
+        
+    }
+    else if (/* condition */)
+    {
+        /* code */
+    }
+    
+    
+       
+}  
 
 // SECTION B: Iterative Palindrome Check
 int is_palindrome_iterative(char* str) {
