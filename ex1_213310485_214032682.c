@@ -11,8 +11,21 @@ int is_palindrome_recursive(char* str, int start, int end) {
 
 // SECTION B: Iterative Palindrome Check
 int is_palindrome_iterative(char* str) {
-    // TODO: Implement the logic for iterative palindrome check
-    return 0; // Placeholder return value
+    int start=0,end= strlen(str) - 1;
+    while (start<end) {
+        while (start<end && !isalnum((unsigned char)str[start])) {
+            start++;
+        }
+        while (start<end && !isalnum((unsigned char)str[end])) {
+            end--;
+        }
+        if (tolower((unsigned char)str[start]) != tolower((unsigned char)str[end])) {
+            return 1;
+        }
+        start++;
+        end--;
+    }
+    return 0;
 }
 
 // Driver Program
