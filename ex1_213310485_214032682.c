@@ -33,7 +33,7 @@ int is_palindrome_recursive(char* str, int start, int end) {
 int is_palindrome_iterative(char* str) {
     int start=0,end= strlen(str) - 1;
     if (str == NULL || strlen(str) == 0) {
-        return 0;
+        return 1;
     }
     while (start<end) {
         while (start<end && !isalpha(str[start])) {
@@ -43,12 +43,12 @@ int is_palindrome_iterative(char* str) {
             end--;
         }
         if (tolower(str[start]) != tolower(str[end])) {
-            return 1;
+            return 0;
         }
         start++;
         end--;
     }
-    return 0;
+    return 1;
 }
 
 // Driver Program
