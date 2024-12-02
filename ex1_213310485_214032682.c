@@ -10,9 +10,9 @@ int is_palindrome_recursive(char* str, int start, int end) {
         return 1;
     }
     //legal char
-    if ( isalpha(( char)str[start]) && isalpha(( char)str[end]) )
+    if ( isalpha((char)str[start]) && isalpha((char)str[end]) )
     {
-        if (tolower(( char)str[start]) == tolower(( char)str[end])) {//keep going
+        if (tolower((char)str[start]) == tolower((char)str[end])) {//keep going
             return 1 * is_palindrome_recursive(str,  start+1,  end-1 );
         }
         else {//exit
