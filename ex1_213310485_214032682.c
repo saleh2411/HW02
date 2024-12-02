@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 // SECTION A: Recursive Palindrome Check
 int is_palindrome_recursive(char* str, int start, int end) {
     // TODO: Implement the logic for recursive palindrome check
